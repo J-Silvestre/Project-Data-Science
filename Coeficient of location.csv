@@ -1,0 +1,135 @@
+neighbourhood_group,neighbourhood,coeficient_of_location 
+Alenquer,Abrigada e Cabanas de Torres,0.8
+Alenquer,Aldeia Galega da Merceana e Aldeia Gavinha,0.8
+Alenquer,Alenquer (Santo Estvo e Triana),1.2
+Alenquer,Carnota,0.9
+Alenquer,Carregado e Cadafais,1.2
+Alenquer,Meca,0.9
+Alenquer,Olhalvo,0.8
+Alenquer,Ota,0.9
+Alenquer,Ribafria e Pereiro de Palhacana,0.8
+Alenquer,Ventosa,0.65
+Alenquer,Vila Verde dos Francos,0.8
+Amadora,Alfragide,1.7
+Amadora,Encosta do Sol,1.4
+Amadora,Falagueira-Venda Nova,1.95
+Amadora,guas Livres,1.2
+Amadora,Mina de gua,1.5
+Amadora,Venteira,1.5
+Arruda Dos Vinhos,Arranh,1
+Arruda Dos Vinhos,Arruda dos Vinhos,0.95
+Arruda Dos Vinhos,Cardosas,0.95
+Arruda Dos Vinhos,Santiago dos Velhos,0.9
+Azambuja,Alcoentre,0.95
+Azambuja,Aveiras de Baixo,0.95
+Azambuja,Aveiras de Cima,1
+Azambuja,Azambuja,1.2
+"Azambuja,""Manique do Intendente, V.N.de S.Pedro e Maussa"",0.75"
+Azambuja,Vale do Paraso,0.95
+Azambuja,Vila Nova da Rainha,1.1
+Cadaval,Alguber,0.75
+Cadaval,Cadaval e Pro Moniz,0.75
+Cadaval,Lamas e Cercal,0.75
+Cadaval,Painho e Figueiros,0.75
+Cadaval,Peral,0.75
+Cadaval,Vermelha,0.75
+Cadaval,Vilar,0.75
+Cascais,Alcabideche,1.5
+Cascais,Carcavelos e Parede,2.2
+Cascais,Cascais e Estoril,3.5
+Cascais,So Domingos de Rana,1.8
+Lisboa,Ajuda,2.2
+Lisboa,Alcntara,2.9
+Lisboa,Alvalade,2.95
+Lisboa,Areeiro,2.6
+Lisboa,Arroios,2.9
+Lisboa,Avenidas Novas,1.15
+Lisboa,Beato,2.2
+Lisboa,Belm,3.5
+Lisboa,Benfica,2.5
+Lisboa,Campo de Ourique,2.6
+Lisboa,Campolide,2.8
+Lisboa,Carnide,2.35
+Lisboa,Estrela,3.1
+Lisboa,Lumiar,2.25
+Lisboa,Marvila,2.2
+Lisboa,Misericrdia,3.5
+Lisboa,Olivais,2.1
+Lisboa,Parque das Naes,3
+Lisboa,Penha de Frana,2.5
+Lisboa,Santa Clara,2.5
+Lisboa,Santa Maria Maior,1.4
+Lisboa,Santo Antnio,2.6
+Lisboa,So Domingos de Benfica,2.45
+Lisboa,So Vicente,2.6
+Loures,Bucelas,1.65
+"Loures,""Camarate, Unhos e Apelao"",1.4"
+Loures,Fanhes,1.2
+Loures,Loures,2
+Loures,Lousa,1.2
+Loures,Moscavide e Portela,2.3
+Loures,Sacavm e Prior Velho,1.7
+"Loures,""Santa Iria de Azoia, So Joo da Talha e Bobadela"",1.65"
+Loures,Santo Antnio dos Cavaleiros e Frielas,1.25
+Loures,Santo Anto e So Julio do Tojal,1.8
+Lourinh,Lourinh e Atalaia,1.1
+Lourinh,Miragaia e Marteleira,0.95
+Lourinh,Moita dos Ferreiros,0.9
+Lourinh,Reguengo Grande,0.9
+Lourinh,Ribamar,1.05
+Lourinh,Santa Brbara,0.95
+Lourinh,So Bartolomeu dos Galegos e Moledo,0.9
+Lourinh,Vimeiro,0.95
+Mafra,Azueira e Sobral da Abelheira,1.05
+Mafra,Carvoeira,1.15
+Mafra,Encarnao,1.4
+"Mafra,""Enxara do Bispo, Gradil e Vila Franca do Rosrio"",0.9"
+Mafra,Ericeira,1.4
+Mafra,Igreja Nova e Cheleiros,1.15
+Mafra,Mafra,0.9
+Mafra,Malveira e So Miguel de Alcaina,0.9
+Mafra,Milharado,1.15
+Mafra,Santo Isidoro,1.15
+Mafra,Venda do Pinheiro e Santo Estvo das Gals,1.4
+Odivelas,Odivelas,1.8
+Odivelas,Pontinha e Fames,1.75
+Odivelas,Pvoa de Santo Adrio e Olival de Basto,1.75
+Odivelas,Ramada e Caneas,1.65
+"Oeiras,""Algs, Linda-a-Velha e Cruz Quebrada-Dafundo"",1.9"
+Oeiras,Barcarena,1.4
+Oeiras,Carnaxide e Queijas,1.7
+"Oeiras,""Oeiras e S.Julio da Barra, Pao de Arcos e Caxias"",1.9"
+Oeiras,Porto Salvo,1.7
+Sintra,Agualva e Mira-Sintra,1.45
+Sintra,Algueiro-Mem Martins,1.3
+"Sintra,""Almargem do Bispo, Pro Pinheiro e Montelavar"",1"
+Sintra,Cacm e So Marcos,1.25
+Sintra,Casal de Cambra,1.3
+Sintra,Colares,1.2
+Sintra,Massam e Monte Abrao,1.45
+Sintra,Queluz e Belas,1.5
+Sintra,Rio de Mouro,1.4
+"Sintra,""S.Maria, S.Miguel, S.Martinho, S.Pedro Penaferrim"",1.4"
+Sintra,So Joo das Lampas e Terrugem,1.1
+Sobral De Monte Agrao,Santo Quintino,0.85
+Sobral De Monte Agrao,Sapataria,1
+Sobral De Monte Agrao,Sobral de Monte Agrao,0.8
+Torres Vedras,A dos Cunhados e Maceira,1
+Torres Vedras,Campelos e Outeiro da Cabea,0.9
+Torres Vedras,Carvoeira e Carmes,0.9
+Torres Vedras,Dois Portos e Runa,0.9
+Torres Vedras,Freiria,0.9
+Torres Vedras,Maxial e Monte Redondo,0.9
+Torres Vedras,Ponte do Rol,1
+Torres Vedras,Ramalhal,1
+Torres Vedras,Silveira,1.1
+Torres Vedras,So Pedro da Cadeira,1
+"Torres Vedras,""S.Pedro e Santiago, S.Maria e S.Miguel, e Mataces"",0.9"
+Torres Vedras,Turcifal,1
+Torres Vedras,Ventosa,0.95
+"Vila Franca De Xira,""Alhandra, So Joo dos Montes e Calhandriz"",1.5"
+Vila Franca De Xira,Alverca do Ribatejo e Sobralinho,1.65
+Vila Franca De Xira,Castanheira do Ribatejo e Cachoeiras,1.45
+Vila Franca De Xira,Pvoa de Santa Iria e Forte da Casa,1.55
+Vila Franca De Xira,Vialonga,1.4
+Vila Franca De Xira,Vila Franca de Xira,1.75
