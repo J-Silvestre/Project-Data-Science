@@ -67,19 +67,26 @@ stopwords.fileids()
 
 
 
+# Do a loop for all the languages to improve?
 stop_wordsEn = stopwords.words("english")
 stop_wordsGer = stopwords.words("german")
 stop_wordsFr = stopwords.words("french")
 stop_wordsPt = stopwords.words("portuguese")
 stop_wordsEs = stopwords.words("spanish")
 
+reviews["w/o_stopwords"]= reviews["punctuation"].apply(lambda x: " ".join(word for word in x.split() if word not in stop_wordsEn))
+reviews["w/o_stopwords"]= reviews["w/o_stopwords"].apply(lambda x: " ".join(word for word in x.split() if word not in stop_wordsGer))
+reviews["w/o_stopwords"]= reviews["w/o_stopwords"].apply(lambda x: " ".join(word for word in x.split() if word not in stop_wordsFr))
+reviews["w/o_stopwords"]= reviews["w/o_stopwords"].apply(lambda x: " ".join(word for word in x.split() if word not in stop_wordsPt))
+reviews["w/o_stopwords"]= reviews["w/o_stopwords"].apply(lambda x: " ".join(word for word in x.split() if word not in stop_wordsEs))
 
 
-reviews["punctuation"].apply(lambda x: " ".join(word for word in x.split() if word not in stop_wordsEn))
+
+reviews["word_count"] = reviews["w/o_stopwords"].apply(lambda x: len(x.split()))
 
 
-pd.Series(" ".join(reviews["punctuation"]).split() ).value_counts()
 
+pd.Series(" ".join(reviews["w/o_stopwords"]).split()).value_counts()
 
 
 
