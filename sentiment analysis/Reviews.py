@@ -1,6 +1,7 @@
 
 
 import pandas as pd
+import nltk
 from nltk.tokenize import RegexpTokenizer
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 from nltk.corpus import stopwords
@@ -92,6 +93,15 @@ reviews["word_count"] = reviews["w/o_stopwords"].apply(lambda x: len(x.split()))
 
 
 pd.Series(" ".join(reviews["w/o_stopwords"]).split()).value_counts()
+
+words= " ".join(reviews["w/o_stopwords"]).split()
+
+
+fd= nltk.FreqDist(words)
+fd.most_common(30)
+
+
+# https://www.youtube.com/watch?v=_jLRKUuBUtY -> Link for translation guide?
 
 
 
