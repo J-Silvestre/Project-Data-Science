@@ -1,0 +1,105 @@
+,neighbourhood_group,neighbourhood,coefficient_of_location ,purchase_power_pc,crime_rate_pc
+0,Alenquer,Abrigada e Cabanas de Torres,0.8,89.0,21.9
+1,Alenquer,Aldeia Galega da Merceana e Aldeia Gavinha,0.8,89.0,21.9
+2,Alenquer,Alenquer (Santo Estvo e Triana),1.2,89.0,21.9
+3,Alenquer,Carnota,0.9,89.0,21.9
+4,Alenquer,Carregado e Cadafais,1.2,89.0,21.9
+5,Alenquer,Meca,0.9,89.0,21.9
+6,Alenquer,Olhalvo,0.8,89.0,21.9
+7,Alenquer,Ota,0.9,89.0,21.9
+8,Alenquer,Ribafria e Pereiro de Palhacana,0.8,89.0,21.9
+9,Alenquer,Ventosa,0.65,89.0,21.9
+10,Alenquer,Vila Verde dos Francos,0.8,89.0,21.9
+11,Amadora,Alfragide,1.7,100.1,27.1
+12,Amadora,Encosta do Sol,1.4,100.1,27.1
+13,Amadora,Falagueira-Venda Nova,1.95,100.1,27.1
+14,Amadora,guas Livres,1.2,100.1,27.1
+15,Amadora,Mina de gua,1.5,100.1,27.1
+16,Amadora,Venteira,1.5,100.1,27.1
+17,Azambuja,Alcoentre,0.95,98.9,36.6
+18,Azambuja,Aveiras de Baixo,0.95,98.9,36.6
+19,Azambuja,Aveiras de Cima,1.0,98.9,36.6
+20,Azambuja,Azambuja,1.2,98.9,36.6
+21,Azambuja,Vale do Paraso,0.95,98.9,36.6
+22,Azambuja,Vila Nova da Rainha,1.1,98.9,36.6
+23,Cadaval,Alguber,0.75,72.4,23.6
+24,Cadaval,Cadaval e Pro Moniz,0.75,72.4,23.6
+25,Cadaval,Lamas e Cercal,0.75,72.4,23.6
+26,Cadaval,Painho e Figueiros,0.75,72.4,23.6
+27,Cadaval,Peral,0.75,72.4,23.6
+28,Cadaval,Vermelha,0.75,72.4,23.6
+29,Cadaval,Vilar,0.75,72.4,23.6
+30,Cascais,Alcabideche,1.5,118.0,25.2
+31,Cascais,Carcavelos e Parede,2.2,118.0,25.2
+32,Cascais,Cascais e Estoril,3.5,118.0,25.2
+33,Cascais,So Domingos de Rana,1.8,118.0,25.2
+34,Lisboa,Ajuda,2.2,205.6,49.7
+35,Lisboa,Alcntara,2.9,205.6,49.7
+36,Lisboa,Alvalade,2.95,205.6,49.7
+37,Lisboa,Areeiro,2.6,205.6,49.7
+38,Lisboa,Arroios,2.9,205.6,49.7
+39,Lisboa,Avenidas Novas,1.15,205.6,49.7
+40,Lisboa,Beato,2.2,205.6,49.7
+41,Lisboa,Belm,3.5,205.6,49.7
+42,Lisboa,Benfica,2.5,205.6,49.7
+43,Lisboa,Campo de Ourique,2.6,205.6,49.7
+44,Lisboa,Campolide,2.8,205.6,49.7
+45,Lisboa,Carnide,2.35,205.6,49.7
+46,Lisboa,Estrela,3.1,205.6,49.7
+47,Lisboa,Lumiar,2.25,205.6,49.7
+48,Lisboa,Marvila,2.2,205.6,49.7
+49,Lisboa,Misericrdia,3.5,205.6,49.7
+50,Lisboa,Olivais,2.1,205.6,49.7
+51,Lisboa,Parque das Naes,3.0,205.6,49.7
+52,Lisboa,Penha de Frana,2.5,205.6,49.7
+53,Lisboa,Santa Clara,2.5,205.6,49.7
+54,Lisboa,Santa Maria Maior,1.4,205.6,49.7
+55,Lisboa,Santo Antnio,2.6,205.6,49.7
+56,Lisboa,So Domingos de Benfica,2.45,205.6,49.7
+57,Lisboa,So Vicente,2.6,205.6,49.7
+58,Loures,Bucelas,1.65,101.0,25.4
+59,Loures,Fanhes,1.2,101.0,25.4
+60,Loures,Loures,2.0,101.0,25.4
+61,Loures,Lousa,1.2,101.0,25.4
+62,Loures,Moscavide e Portela,2.3,101.0,25.4
+63,Loures,Sacavm e Prior Velho,1.7,101.0,25.4
+64,Loures,Santo Antnio dos Cavaleiros e Frielas,1.25,101.0,25.4
+65,Loures,Santo Anto e So Julio do Tojal,1.8,101.0,25.4
+66,Mafra,Azueira e Sobral da Abelheira,1.05,98.3,22.9
+67,Mafra,Carvoeira,1.15,98.3,22.9
+68,Mafra,Encarnao,1.4,98.3,22.9
+69,Mafra,Ericeira,1.4,98.3,22.9
+70,Mafra,Igreja Nova e Cheleiros,1.15,98.3,22.9
+71,Mafra,Mafra,0.9,98.3,22.9
+72,Mafra,Malveira e So Miguel de Alcaina,0.9,98.3,22.9
+73,Mafra,Milharado,1.15,98.3,22.9
+74,Mafra,Santo Isidoro,1.15,98.3,22.9
+75,Mafra,Venda do Pinheiro e Santo Estvo das Gals,1.4,98.3,22.9
+76,Odivelas,Odivelas,1.8,88.8,18.9
+77,Odivelas,Pontinha e Fames,1.75,88.8,18.9
+78,Odivelas,Pvoa de Santo Adrio e Olival de Basto,1.75,88.8,18.9
+79,Odivelas,Ramada e Caneas,1.65,88.8,18.9
+80,Oeiras,Barcarena,1.4,153.1,22.5
+81,Oeiras,Carnaxide e Queijas,1.7,153.1,22.5
+82,Oeiras,Porto Salvo,1.7,153.1,22.5
+83,Sintra,Agualva e Mira-Sintra,1.45,93.6,26.3
+84,Sintra,Algueiro-Mem Martins,1.3,93.6,26.3
+85,Sintra,Cacm e So Marcos,1.25,93.6,26.3
+86,Sintra,Casal de Cambra,1.3,93.6,26.3
+87,Sintra,Colares,1.2,93.6,26.3
+88,Sintra,Massam e Monte Abrao,1.45,93.6,26.3
+89,Sintra,Queluz e Belas,1.5,93.6,26.3
+90,Sintra,Rio de Mouro,1.4,93.6,26.3
+91,Sintra,So Joo das Lampas e Terrugem,1.1,93.6,26.3
+92,Torres Vedras,A dos Cunhados e Maceira,1.0,96.4,23.6
+93,Torres Vedras,Campelos e Outeiro da Cabea,0.9,96.4,23.6
+94,Torres Vedras,Carvoeira e Carmes,0.9,96.4,23.6
+95,Torres Vedras,Dois Portos e Runa,0.9,96.4,23.6
+96,Torres Vedras,Freiria,0.9,96.4,23.6
+97,Torres Vedras,Maxial e Monte Redondo,0.9,96.4,23.6
+98,Torres Vedras,Ponte do Rol,1.0,96.4,23.6
+99,Torres Vedras,Ramalhal,1.0,96.4,23.6
+100,Torres Vedras,Silveira,1.1,96.4,23.6
+101,Torres Vedras,So Pedro da Cadeira,1.0,96.4,23.6
+102,Torres Vedras,Turcifal,1.0,96.4,23.6
+103,Torres Vedras,Ventosa,0.95,96.4,23.6
