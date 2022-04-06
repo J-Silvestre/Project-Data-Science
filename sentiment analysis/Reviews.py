@@ -62,7 +62,7 @@ print(reviews.head())
 #Note: stopwords doesnt include all languages 
 #I still dont know what to do from this point because of the multiple languages
 
-
+#languages avalailable for stopwords
 stopwords.fileids()
 
 
@@ -87,8 +87,23 @@ reviews["w/o_stopwords"]= reviews["w/o_stopwords"].apply(lambda x: " ".join(word
 #I noticed that some some stop words from a language remove words from other language
 #And this takes a lot of time and memory, my pc almost burned
 
-
+#nr of words of each comment
 reviews["word_count"] = reviews["w/o_stopwords"].apply(lambda x: len(x.split()))
+
+#nr of characters in a comment
+reviews["chars_count"] = reviews["w/o_stopwords"].apply(lambda x: len(x))
+
+#average length of words per comment
+reviews["avg_len_word"]=reviews["chars_count"]/reviews["word_count"]
+
+#nr of stop words per comment
+reviews["stop_word_count"] = reviews["punctuation"].apply(lambda x: len(x.split())) - reviews["word_count"]
+
+#stop words rate per comment
+reviews["stop_words_rate"] = reviews["stop_word_count"] /reviews["punctuation"].apply(lambda x: len(x.split())) * 100 
+
+#analyze this shit later, erros spotted due to language and other stuff 
+reviews.sort_values(by="stop_words_rate").head(30)
 
 
 
