@@ -26,6 +26,7 @@ df_reviews_2.to_csv("reviews_update_2.csv", sep=",")
 df_reviews_3.to_csv("reviews_update_3.csv", sep=",")
 df_reviews_4.to_csv("reviews_update_4.csv", sep=",")
 
+
 '''
 # merge splitted review files
 dfs = [df_reviews_1, df_reviews_2, df_reviews_3, df_reviews_4]
@@ -35,7 +36,6 @@ merged_df = pd.concat(dfs)
 merged_df = merged_df.dropna()
 '''
 
-
 '''
 # Remove "\r<br/>" from column "comments"
 # Note: Python gives an error, but removes the "\r<br/>" values correctly! But because of the error it is not possible to save the new file.
@@ -43,5 +43,3 @@ comments = df_reviews["comments"]
 for i in range (len(comments)):
     comments[i] = comments[i].replace("\r<br/>", "")
 '''
-
-df_reviews.to_csv("reviews_update.csv", sep=",")
