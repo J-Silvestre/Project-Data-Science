@@ -5,6 +5,9 @@ import nltk
 from nltk.tokenize import RegexpTokenizer
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 from nltk.corpus import stopwords
+import matplotlib.pyplot as plt
+from wordcloud import WordCloud
+from textblob import TextBlob
 
 
 
@@ -114,6 +117,30 @@ words= " ".join(reviews["w/o_stopwords"]).split()
 
 fd= nltk.FreqDist(words)
 fd.most_common(30)
+
+
+#word cloud
+wc = WordCloud(background_color= "white", height = 600, width = 400)
+
+wc.generate(words)
+
+wc.to_file("wordcloud_output.png")
+
+#sentiment analysis
+
+blob = TextBlob(words)
+sentiment = blob.sentiment.polarity
+
+sentiment
+
+
+
+#plots
+
+common = fd.most_common()
+
+fd.plot(20, cumulative = False)
+
 
 
 # https://www.youtube.com/watch?v=_jLRKUuBUtY -> Link for translation guide?
