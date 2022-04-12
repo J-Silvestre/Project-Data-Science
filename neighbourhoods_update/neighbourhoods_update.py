@@ -13,8 +13,9 @@ df_neigh = pd.read_csv("Neighbourhoods.csv", sep=",")
 df_purch = pd.read_excel("Purchase_power_pc.xlsx",sheet_name="Sheet1")
 df_crime = pd.read_excel("Crime_rate_pc.xlsx",sheet_name="Sheet1")
 df_pop = pd.read_excel("Population_density.xlsx", sheet_name="Sheet1")
+df_tourist = pd.read_excel("Tourist_accomodations.xlsx", sheet_name = "Sheet1")
 
-list1 = [df_purch, df_crime, df_pop]
+list1 = [df_purch, df_crime, df_pop, df_tourist]
 
 for i in range(len(list1)):
     df_neigh= pd.merge(df_neigh, list1[i], how="inner", on="neighbourhood_group")
