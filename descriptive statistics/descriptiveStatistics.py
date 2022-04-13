@@ -99,6 +99,13 @@ HostType.set_ylabel("Count")
 HostType.set_xlabel("Host")
 
 
+#Create a pie chart for the absolute frequency of number of bedrooms
+Bedroompiechart=listingsUpdate["bedrooms"].value_counts().head(5).plot.pie(autopct= autopct,title='Nr of bedrooms')
+Bedroompiechart.set_ylabel("")
+
+
+
+
 #Creating a pie chart for top 10 listings with more reviews 
 reviewsListing= reviews.groupby("listing_id")
 
@@ -106,3 +113,5 @@ reviewsListing= reviewsListing["comments"].count().reset_index().sort_values("co
 reviewsListingPie = reviewsListing.plot(kind='pie', y='comments', autopct="%1.1f%%",
                                  title='Top 10 listings with more reviews')
 reviewsListingPie.get_legend().remove()
+reviewsListingPie.set_ylabel("")
+reviewsListingPie.set_xlabel("Id")
