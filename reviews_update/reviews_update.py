@@ -20,7 +20,6 @@ df_reviews_2 = df_reviews_2.dropna()
 df_reviews_3 = df_reviews_3.dropna()
 df_reviews_4 = df_reviews_4.dropna()
 
-
 # Eliminate \r<br/>
 df_reviews_1["comments"] = df_reviews_1["comments"].str.replace('\r<br/>', '')
 df_reviews_2["comments"] = df_reviews_2["comments"].str.replace('\r<br/>', '')
