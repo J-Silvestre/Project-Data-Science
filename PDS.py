@@ -19,8 +19,7 @@ Created on Sun Feb 20 13:32:53 2022
 
 
 
-
-pip install fiona
+python --version
 
 
 
@@ -32,7 +31,7 @@ pip install fiona
 # - Where are appartments with high ratings? 
 # - Where are the most expensive appartments?
 
-import fiona
+#import fiona
 import geopandas as gpd
 import os 
 import pandas as pd
