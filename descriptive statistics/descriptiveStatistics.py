@@ -9,13 +9,18 @@ Created on Wed Apr 13 09:11:18 2022
 # import libraries ---------------------------------------------------------------------
 import pandas as pd
 import matplotlib.pyplot as plt
+import os 
+
+os.chdir('/Users/marcb/Documents/Studies/ISEG/Semester II /programming/Project-Data-Science')
 
 # Plots for listingsUpdate------------------------------------------------------------- 
 
 # Load updated Listing File
 #listingsUpdate = pd.read_csv("C:\\Users\\Rosan\\Documents\\GitHub\\listing_update\\listing_update.csv", sep='\t')
-listingsUpdate = pd.read_csv("C:\\Users\\rodri\\OneDrive\\Documentos\\GitHub\\Project-Data-Science\\listing_update\\listing_update.csv", sep='\t')
-reviews= pd.read_csv("C:\\Users\\rodri\\OneDrive - ISEG\\iseg 22092021\\Iseg\\Master\\2semester\\Programing for Data Science\\trabalho\\reviews.csv.gz", compression= "gzip")
+listingsUpdate = pd.read_csv("listing_update/listing_update.csv", sep='\t')
+#reviews= pd.read_csv("reviews_update/reviews.csv.gz", compression= "gzip")
+
+
 # Bar Chart: Top 10 Hosts with most Listings
 barPlot_top10Hosts = listingsUpdate['host_id'].value_counts().head(10).plot.bar(title='Top 10 Hosts with most Listings')
 barPlot_top10Hosts.set_xlabel("Host ID")
@@ -31,6 +36,7 @@ def autopct(pct): # only show the label when it's > 10%
     return ('%.2f' % pct) if pct > 10 else ''
 
 pieChart_Accommodates = listingsUpdate['accommodates'].value_counts().head(10).plot.pie(autopct= autopct,title='Maximum capacity of Listing')
+
 pieChart_Accommodates.set_ylabel("")
 
 # Pie Chart: Review Rating above 4
@@ -63,6 +69,7 @@ listingsUpdate["price"].describe()
 fig= plt.figure()
 
 BoxplotPrice= fig.add_subplot(111)
+
 BoxplotPrice.boxplot(listingsUpdate["price"])
 
 BoxplotPrice.set_ylabel("price")
@@ -92,7 +99,6 @@ plt.show()
 listingsUpdateOut["price"].describe()
 
 
-
 #Compares the number of super hosts(1) with normal hosts(0)
 HostType= listingsUpdate["host_is_superhost"].value_counts().plot.bar(title="Types of hosts")
 HostType.set_ylabel("Count")
@@ -104,8 +110,6 @@ Bedroompiechart=listingsUpdate["bedrooms"].value_counts().head(5).plot.pie(autop
 Bedroompiechart.set_ylabel("")
 
 
-
-
 #Creating a pie chart for top 10 listings with more reviews 
 reviewsListing= reviews.groupby("listing_id")
 
@@ -115,3 +119,23 @@ reviewsListingPie = reviewsListing.plot(kind='pie', y='comments', autopct="%1.1f
 reviewsListingPie.get_legend().remove()
 reviewsListingPie.set_ylabel("")
 reviewsListingPie.set_xlabel("Id")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
