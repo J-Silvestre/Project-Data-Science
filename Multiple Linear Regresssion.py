@@ -13,13 +13,26 @@ from sklearn.metrics import mean_squared_error
 from sklearn.metrics import r2_score
 from sklearn import preprocessing
 from sklearn.preprocessing import StandardScaler
+import os 
 
 
-listings = pd.read_csv("listing_update.csv", sep = "\t")
-neighb = pd.read_csv("neighbourhoods_update.csv", sep = ",")
+os.chdir('/Users/marcb/Documents/Studies/ISEG/Semester II /programming/Project-Data-Science')
+
+
+listings = pd.read_csv("listing_update/listing_update.csv", sep = "\t")
+neighb = pd.read_csv("neighbourhoods_update/neighbourhoods_update.csv", sep = ",")
+
+
+
+
 
 main = pd.merge(listings, neighb, how="inner", on="neighbourhood_group")
-main = main[["price", "number_of_reviews", "calculated_host_listings_count", "availability_365", "host_response_rate", "nr_of_bathrooms", "bedrooms", "review_scores_rating", "coefficient_of_location", "purchase_power_pc", "crime_rate_pc", "population_density"]]
+main = main[["price", "number_of_reviews", "calculated_host_listings_count", "availability_365", "host_response_rate", "nr_of_bathrooms", "bedrooms", "review_scores_rating", "purchase_power_pc", "crime_rate_pc", "population_density"]]
+
+
+
+
+
 
 
 y = (main.price) #target variable
