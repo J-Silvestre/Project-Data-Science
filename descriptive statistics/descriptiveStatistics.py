@@ -80,7 +80,7 @@ plt.show()
 
 #Removing outliers
 PriceQuantileLow = listingsUpdate["price"].quantile(0.01)
-PriceQuantileHigh = listingsUpdate["price"].quantile(0.99)
+PriceQuantileHigh = listingsUpdate["price"].quantile(0.95)
 listingsUpdateOut= listingsUpdate[(listingsUpdate["price"]< PriceQuantileHigh) & (listingsUpdate["price"] >PriceQuantileLow)]
 
 
