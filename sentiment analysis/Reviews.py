@@ -14,7 +14,7 @@ from textblob import TextBlob
 
 reviews= pd.read_csv("C:\\Users\\rodri\\OneDrive - ISEG\\iseg 22092021\\Iseg\\Master\\2semester\\Programing for Data Science\\trabalho\\reviews.csv.gz", compression= "gzip")
 
-reviews.head()
+
 
 
 
@@ -106,7 +106,7 @@ reviews["stop_word_count"] = reviews["punctuation"].apply(lambda x: len(x.split(
 #stop words rate per comment
 reviews["stop_words_rate"] = reviews["stop_word_count"] /reviews["punctuation"].apply(lambda x: len(x.split())) * 100 
 
-#analyze this shit later, erros spotted due to language and other stuff 
+# erros spotted due to language and other stuff 
 reviews.sort_values(by="stop_words_rate").head(30)
 
 #not working because of the empty values i think
@@ -134,7 +134,7 @@ reviews.head()
 
 #removes does empty spaces
 Comments_final =reviews.dropna()
-Comments_final.sort_values(by="stop_words_rate").tail(30)
+#Comments_final.sort_values(by="stop_words_rate").tail(30)
 
 #provides some statistics
 Comments_final.describe()
@@ -166,40 +166,51 @@ wc.to_file("wordcloud_output.png")
 
 #This also takes a lot of time to run and im not sure if its working properly
 
-blob = TextBlob(str(words))
-sentiment = blob.sentiment.polarity
-
-
-sentiment
-
-
-vader = SentimentIntensityAnalyzer()
-vader.polarity_scores(words)
-
-
-fd= nltk.FreqDist(words)
-fd.most_common(30)
-
-
-#word cloud
-wc = WordCloud(background_color= "white", height = 600, width = 400)
-
-wc.generate(words)
-
-wc.to_file("wordcloud_output.png")
-
-#sentiment analysis
+#reorganized index
+Index=[]
+for i in range(len(Comments_final["w/o_stopwords"])):
+    Index.append(i)
+    
+Comments_final["Index"]= Index
+Comments_final=Comments_final.set_index("Index")
 
 
 
+#creating a function to get the polarity of the comments
+Comments_final["w/o_stopwords"]=Comments_final["w/o_stopwords"].astype('str')
+def get_polarity(text):
+    return TextBlob(text).sentiment.polarity
 
-#plots / visualization
+#applying the fucntion
+Comments_final['Polarity'] = Comments_final['w/o_stopwords'].apply(get_polarity)
 
+
+#adding columns with the polarity score as negative, neutral or positive
+Comments_final['Sentiment_Type']=''
+Comments_final.loc[Comments_final.Polarity>0,'Sentiment_Type']='POSITIVE'
+Comments_final.loc[Comments_final.Polarity==0,'Sentiment_Type']='NEUTRAL'
+Comments_final.loc[Comments_final.Polarity<0,'Sentiment_Type']='NEGATIVE'
+
+
+#grouping by listings id to get the mean polarity of all coments for each listing
+CommentScore=Comments_final[["listing_id","Polarity"]]
+CommentScore=CommentScore.groupby(["listing_id"]) 
+Score=CommentScore["Polarity"].mean()
+Score.describe()
+
+Score.to_csv("sentiment.csv")
+
+#plots / visualization -----------------------
+
+
+#most common words
 common = fd.most_common()
 
 fd.plot(20, cumulative = False)
 
 
+#bar plot for sentiment analysis
+Comments_final.Sentiment_Type.value_counts().plot(kind='bar',title="Sentiment Analysis")
 
 # https://www.youtube.com/watch?v=_jLRKUuBUtY -> Link for translation guide?
 
