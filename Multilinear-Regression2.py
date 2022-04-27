@@ -7,7 +7,7 @@ Created on Sun Apr 24 13:58:48 2022
 """
 
 import pandas as pd 
-import os 
+import os
 import numpy as np 
 import seaborn as sns
 from scipy import stats
@@ -173,16 +173,16 @@ print(MSE)
 # Boosting the Regression with XG-Boost
 
 model = XGBRegressor()
-define model evaluation method
+# define model evaluation method
 cv = RepeatedKFold(n_splits=10, n_repeats=3, random_state=1)
-evaluate model
+# evaluate model
 scores = cross_val_score(model, x, y, scoring='neg_mean_absolute_error', cv=cv, n_jobs=-1)
-force scores to be positive
+# force scores to be positive
 scores = absolute(scores)
 
 scores_s = (scores)**2
 
-print('Mean MSE: %.3f (%.3f)' % (scores_s.mean(), scores.std())) 
+print('Mean MSE: %.3f (%.3f)' % (scores_s.mean(), scores.std()))
 
 
 
