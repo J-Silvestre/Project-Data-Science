@@ -17,29 +17,26 @@ from sklearn.metrics import mean_squared_error
 from sklearn.metrics import r2_score
 from sklearn import preprocessing
 from sklearn.preprocessing import StandardScaler
-
-from xgboost import XGBRegressor
 from sklearn.model_selection import cross_val_score
 from sklearn.model_selection import RepeatedKFold
 from sklearn.metrics import mean_absolute_error
 from numpy import absolute
 
 
-os.chdir('/Users/marcb/Documents/Studies/ISEG/Semester II /programming/Project-Data-Science')
+#os.chdir('/Users/joaod/Documents/github/ISEG/Semester II /programming/Project-Data-Science')
 
 listings = pd.read_csv("listing_update/listingsUpdateOut.csv")
-
-
 neighb = pd.read_csv("neighbourhoods_update/neighbourhoods_update.csv", sep = ",")
 
 
 
 main = pd.merge(listings, neighb, how="inner", on="neighbourhood_group")
-main = main[["price", "number_of_reviews",'minimum_nights', "calculated_host_listings_count", "availability_365", "host_response_rate", "nr_of_bathrooms", "bedrooms", "review_scores_rating", "purchase_power_pc", "crime_rate_pc", "population_density"]]
+main = main[["price", "number_of_reviews",'minimum_nights', "calculated_host_listings_count", 
+             "availability_365", "host_response_rate", "nr_of_bathrooms", "bedrooms", "review_scores_rating", "purchase_power_pc", "crime_rate_pc", "population_density"]]
 
 
 data = main[['review_scores_rating','price','minimum_nights','number_of_reviews',
-             'calculated_host_listings_count','availability_365','bedrooms',"purchase_power_pc", "crime_rate_pc", "population_density"]] 
+             'calculated_host_listings_count','availability_365','bedrooms',"purchase_power_pc", "crime_rate_pc", "population_density"]]
 
 
 data['price'].describe()
@@ -77,10 +74,7 @@ sns.histplot(data=data, x='crime_rate_pc', binwidth=3)
 
 #Removing outliers for all variables
 # Outliers are defined as values > 3 standard deviations from mean
-
-
 data = pd.DataFrame(data)
-
 data_out = data[(np.abs(stats.zscore(data)) < 3).all(axis=1)]
 
 
@@ -134,20 +128,10 @@ x = data_log[['bedrooms','review_scores_rating']] #predictors
 
 
 # splitting training and testing data
-
 x_train, x_test, y_train, y_test = train_test_split(x,y,test_size = 0.3, random_state=1)
 
 
-#y_train = y_train.reshape(-1,1)
-#y_test = y_test.reshape(-1,1)
-
-
-#x_test = x_test.reshape(-1,1)
-#x_train = x_train.reshape(-1,1)
-
 #fitting the model to the training data
-
-
 model = lm.LinearRegression()
 model.fit(x_train, y_train)
 
@@ -171,7 +155,7 @@ print(MSE)
 
 
 # Boosting the Regression with XG-Boost
-
+"""
 model = XGBRegressor()
 # define model evaluation method
 cv = RepeatedKFold(n_splits=10, n_repeats=3, random_state=1)
@@ -183,6 +167,8 @@ scores = absolute(scores)
 scores_s = (scores)**2
 
 print('Mean MSE: %.3f (%.3f)' % (scores_s.mean(), scores.std()))
+"""
+
 
 
 
